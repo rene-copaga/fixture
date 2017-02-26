@@ -5,49 +5,35 @@ namespace Fixture.Model
 {
     public class Championship
     {
-        private DateTime    startDate;
-        private string      name;
-        private Place       place;
-        private int         id;
-        private IList<Participant> participants;
-
         public Championship(DateTime startDate)
         {
-            this.startDate = startDate;
-            participants = new List<Participant>();
+            StartDate = startDate;
+            Participants = new List<Participant>();
         }
 
         public Championship(string name, DateTime startDate) : this(startDate)
         {
-            this.name = name;
+            Name = name;
         }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        public int ChampionshipId { get; set; }
 
-        public Place Place
-        {
-            get { return place; }
-            set { place = value; }
-        }
+        public string Name { get; set; }
 
-        public DateTime StartDate
-        {
-            get { return startDate; }
-            set { startDate = value; }
-        }
+        public Place Place { get; set; }
+
+        public DateTime StartDate { get; set; }
+
+        private ICollection<Participant> Participants { get; set; }
 
         public void RegisterParticipant(Participant participant)
         {
-            participants.Add(participant);
+            Participants.Add(participant);
         }
 
         public void RemoveParticipant(Participant participant)
         {
-            participants.Remove(participant);
+            Participants.Remove(participant);
         }
     }
 }
