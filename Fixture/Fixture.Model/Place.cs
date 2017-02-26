@@ -4,9 +4,6 @@ namespace Fixture.Model
 {
     public class Place
     {
-        string placeName;
-        string address;
-
         public Place(string placeName, string address)
         {
             if (placeName == null)
@@ -19,20 +16,16 @@ namespace Fixture.Model
                 throw new ArgumentNullException("address");
             }
 
-            this.placeName = placeName;
-            this.address   = address;
+            PlaceName = placeName;
+            Address   = address;
         }
 
-        public string PlaceName
-        {
-            get { return placeName; }
-            set { placeName = value; }
-        }
+        public int PlaceId { get; set; }
 
-        public string Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
+        public string PlaceName { get; set; }
+
+        public string Address { get; set; }
+
+        public Championship Championship { get; set; }
     }
 }

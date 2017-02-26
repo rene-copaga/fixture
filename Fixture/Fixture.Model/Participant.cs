@@ -4,17 +4,17 @@ namespace Fixture.Model
 {
     public abstract class Participant
     {
-        DateTime registerDate;
-
         public Participant()
         {
-            registerDate = DateTime.Now;
+            RegisterDate = DateTime.Now;
         }
 
-        public DateTime RegisterDate
-        {
-            get { return registerDate; }
-            set { registerDate = value; }
-        }
+        public int ParticipantId { get; set; }
+
+        public DateTime RegisterDate { get; set; }
+
+        public int ChampionshipId { get; set; }
+
+        public Championship Championship { get; set; }
     }
 }

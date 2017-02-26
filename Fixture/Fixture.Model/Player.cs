@@ -4,47 +4,21 @@ namespace Fixture.Model
 {
     public class Player : Participant
     {
-        private string names;
-        private string lastNames;
-        private int height;
-        private int weight;
-        DateTime birthDate;
-
         public Player(string names, string lastNames, DateTime birthDate) : base()
         {
-            this.names = names;
-            this.lastNames = lastNames;
-            this.birthDate = birthDate;
+            Names = names;
+            LastNames = lastNames;
+            BirthDate = birthDate;
         }
 
-        public string Names
-        {
-            get { return names; }
-            set { names = value; }
-        }
+        public string Names { get; set; }
 
-        public string LastNames
-        {
-            get { return lastNames; }
-            set { lastNames = value; }
-        }
+        public string LastNames { get; set; }
 
-        public DateTime BirthDate
-        {
-            get { return birthDate; }
-            set { birthDate = value; }
-        }
+        public DateTime BirthDate { get; set; }
 
-        public int Height
-        {
-            get { return height; }
-            set { height = value; }
-        }
+        public int Height { get; set; }
 
-        public int Weight
-        {
-            get { return weight; }
-            set { weight = value; }
-        }
+        public int Weight { get; set; }
     }
 }
